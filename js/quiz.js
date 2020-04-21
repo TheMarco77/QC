@@ -16,6 +16,14 @@
    - Keep track of the number of correct answers
 */
 
+/*
+- Questions to use.
+- What is the capital of the United States?
+- How many colors in the Colombian flag?
+- WHat was the year Portugual was free from dictatorship?
+- What is the capital of Angola?
+- How many days does it take to get to the moon?
+*/
 
 /*
   5. Rank player based on number of correct answers
