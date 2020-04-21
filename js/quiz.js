@@ -5,11 +5,11 @@ let correctAnswers = 0;
   - When quiz begins, no answers are correct
 */
 
-const correctAnswer1 = 'Washington, D.C.';
-const correctAnswer2 = ['three', '3'];
-const correctAnswer3 = 1974;
-const correctAnswer4 = 'Luanda';
-const correctAnswer5 = ['3days', '3', 'three', 'three days'];
+const correctAnswerOne = 'Washington, D.C.';
+const correctAnswerTwo = ['three', '3'];
+const correctAnswerThree = 1974;
+const correctAnswerFour = 'Luanda';
+const correctAnswerFive = ['3days', '3', 'three', 'three days'];
 
 // 2. Store the rank of a player
 
@@ -27,11 +27,18 @@ const noRank = 'Sorry, you did not rank!';
   - Keep track of the number of correct answers
 */
 
-const question1 = prompt('What is the capital of the United States?');
-const question2 = prompt('How many colors in the Colombian flag?');
-const question3 = prompt('What was the year Portugal was free from dictatorship?');
-const question4 = prompt('What is the capital of Angola, Africa?');
-const question5 = prompt('How many days does it take to get to the moon from planet Earth?');
+const questionOne = prompt('What is the capital of the United States?');
+const questionTwo = prompt('How many colors in the Colombian flag?');
+const questionThree = prompt('What was the year Portugal was free from dictatorship?');
+const questionFour = prompt('What is the capital of Angola, Africa?');
+const questionFive = prompt('How many days does it take to get to the moon from planet Earth?');
+
+if (questionOne === correctAnswerOne) {
+  correctAnswers += 1;
+  document.querySelector('main').innerHTML = `<h1>You got ${correctAnswers} out of 5 questions correct.</h1>`;
+}
+console.log(correctAnswers);
+
 
 /*
   5. Rank player based on number of correct answers
@@ -43,3 +50,7 @@ const question5 = prompt('How many days does it take to get to the moon from pla
 
 
 // 6. Output results to the <main> element
+
+if (correctAnswers < 5) {
+  rank = 'No crown'
+}
