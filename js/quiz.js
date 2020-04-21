@@ -13,6 +13,10 @@ const correctAnswer5 = ['3days', '3', 'three', 'three days'];
 
 // 2. Store the rank of a player
 
+const rankOne = 'Gold';
+const rankTwo = 'Bronze';
+const rankThree = 'Silver';
+const noRank = 'Sorry, you did not rank!';
 
 // 3. Select the <main> HTML element
 
