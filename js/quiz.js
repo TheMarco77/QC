@@ -20,7 +20,7 @@
 - Questions to use.
 - What is the capital of the United States?
 - How many colors in the Colombian flag?
-- WHat was the year Portugual was free from dictatorship?
+- WHat was the year Portugal was free from dictatorship?
 - What is the capital of Angola?
 - How many days does it take to get to the moon?
 */
@@ -35,4 +35,3 @@
 
 
 // 6. Output results to the <main> element
-
