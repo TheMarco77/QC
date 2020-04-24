@@ -1,25 +1,18 @@
 let correctAnswers = 0;
 
-/* 
-  1. Store correct answers
-  - When quiz begins, no answers are correct
-*/
-
-const correctAnswerOne = 'Washington, D.C.';
-const correctAnswerTwo = ['three', '3'];
-const correctAnswerThree = 1974;
-const correctAnswerFour = 'Luanda';
-const correctAnswerFive = ['3days', '3', 'three', 'three days'];
+const correctOne = 'DC';
+const correctTwo = '3';
+const correctThree = '1974';
+const correctFour = 'Luanda';
+const correctFive = '3';
 
 // 2. Store the rank of a player
-
-const rankOne = 'Gold';
-const rankTwo = 'Bronze';
-const rankThree = 'Silver';
-const noRank = 'Sorry, you did not rank!';
+// const rankOne = 'Gold';
+// const rankTwo = 'Silver';
+// const rankThree = 'Bronze';
+// const noRank = 'Sorry, you did not rank!';
 
 // 3. Select the <main> HTML element
-
 
 /*
   4. Ask at least 5 questions
@@ -27,19 +20,33 @@ const noRank = 'Sorry, you did not rank!';
   - Keep track of the number of correct answers
 */
 
-const questionOne = prompt('What is the capital of the United States?');
-const questionTwo = prompt('How many colors in the Colombian flag?');
-const questionThree = prompt('What was the year Portugal was free from dictatorship?');
-const questionFour = prompt('What is the capital of Angola, Africa?');
-const questionFive = prompt('How many days does it take to get to the moon from planet Earth?');
+const qOne = prompt('What is the capital of the United States?');
+const qTwo = prompt('How many colors in the Colombian flag?');
+const qThree = prompt('What was the year Portugal was free from dictatorship?');
+const qFour = prompt('What is the capital of Angola, Africa?');
+const qFive = prompt('How many days does it take to get to the moon?');
 
-if (questionOne === correctAnswerOne) {
-  correctAnswers += 1;
-  document.querySelector('main').innerHTML = `<h1>You got ${correctAnswers} out of 5 questions correct.</h1>`;
+if (qOne.toUpperCase() === correctOne) {
+  correctAnswers++;
+  console.log(correctAnswers);
+}
+if (qTwo === correctTwo) {
+  correctAnswers++;
+  console.log(correctAnswers);
+}
+if (qThree === correctThree) {
+  correctAnswers++;
+  console.log(correctAnswers);
+}
+if (qFour === correctFour) {
+  correctAnswers++;
+  console.log(correctAnswers);
+}
+if (qFive === correctFive) {
+  correctAnswers++;
+  console.log(correctAnswers);
 }
 console.log(correctAnswers);
-
-
 /*
   5. Rank player based on number of correct answers
   - 5 correct = Gold
@@ -47,10 +54,16 @@ console.log(correctAnswers);
   - 1-2 correct = Bronze
   - 0 correct = No crown
 */
-
-
-// 6. Output results to the <main> element
-
-if (correctAnswers < 5) {
-  rank = 'No crown'
+if (correctAnswers === 5) {
+  console.log('You got all correct, you won the GOLD CROWN');
+} else if (correctAnswers === 4 || correctAnswers === 3) {
+  console.log('You earned the SILVER CROWN');
+} else if (correctAnswers === 2 || correctAnswers === 1) {
+  console.log('You earned the BRONZE CROWN');
+} else {
+  console.log('Sorry you got the all wrong!');
 }
+// 6. Output results to the <main> element
+document.querySelector(
+  'main'
+).innerHTML = `<h1 style="text-align:center">You got ${correctAnswers} out of 5 questions correct.</h1>`;
