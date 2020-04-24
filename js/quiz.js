@@ -38,7 +38,7 @@ if (qThree === correctThree) {
   correctAnswers++;
   console.log(correctAnswers);
 }
-if (qFour === correctFour) {
+if (qFour[0].toUpperCase() + qFour.slice(1) === correctFour) {
   correctAnswers++;
   console.log(correctAnswers);
 }
